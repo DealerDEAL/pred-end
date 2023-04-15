@@ -1,0 +1,72 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+class Seller {
+    public:
+    string name;
+    int id;
+    Seller(string name,int id){
+        this->id = id;
+        this->name = name;
+    }
+};
+class Category {
+    public:
+    string name;
+    int id;
+    Category(string name,int id){
+        this->id = id;
+        this->name = name;
+    }
+};
+class Brand {
+    public:
+    string name;
+    int id;
+    Brand(string name,int id){
+        this->id = id;
+        this->name = name;
+    }
+};
+class Product {
+    public:
+    string seller, brand, product_category, product_name;
+    int id;
+    Product(int id,string seller,string brand,string product_category,string product_name){
+        this->id = id;
+        this->seller = seller;
+        this->brand =brand;
+        this->product_category = product_category;
+        this->product_name = product_name;
+    }
+};
+int main(){
+    Seller *obj1s = new Seller("q", 1);
+    Seller *obj2s = new Seller("w", 2);
+    Seller *obj3s = new Seller("e", 3);
+    Seller *obj4s = new Seller("r", 4);
+    Seller *obj5s = new Seller("t", 5);
+    Brand *obj1b = new Brand("a", 1);
+    Brand *obj2b = new Brand("s", 2);
+    Brand *obj3b = new Brand("d", 3);
+    Brand *obj4b = new Brand("f", 4);
+    Brand *obj5b = new Brand("g", 5);
+    Category *obj1c = new Category("z", 1);
+    Category *obj2c = new Category("x", 2);
+    Category *obj3c = new Category("c", 3);
+    Category *obj4c = new Category("v", 4);
+    Category *obj5c = new Category("b", 5);
+    Product *obj1p = new Product(1, "obj1s", "obj1b", "obj1c", "ha");
+    Product *obj2p = new Product(2, "obj2s", "obj2b", "obj2c", "hs");
+    Product *obj3p = new Product(3, "obj3s", "obj3b", "obj3c", "hd");
+    Product *obj4p = new Product(4, "obj4s", "obj4b", "obj4c", "hf");
+    Product *obj5p = new Product(5, "obj5s", "obj5b", "obj5c", "hg");
+    cout<<"id"<<" "<<"seller"<<" "<<"brand"<<" "<<"product_category"<<" "<<"product_name"<<"\n";
+    cout<<obj1p->id<<setw(5)<<obj1s->name<<setw(7)<<obj1b->name<<setw(11)<<obj1c->name<<setw(16)<<obj1p->product_name<<"\n";
+    cout<<obj2p->id<<setw(5)<<obj2s->name<<setw(7)<<obj2b->name<<setw(11)<<obj2c->name<<setw(16)<<obj2p->product_name<<"\n";
+    cout<<obj3p->id<<setw(5)<<obj3s->name<<setw(7)<<obj3b->name<<setw(11)<<obj3c->name<<setw(16)<<obj3p->product_name<<"\n";
+    cout<<obj4p->id<<setw(5)<<obj4s->name<<setw(7)<<obj4b->name<<setw(11)<<obj4c->name<<setw(16)<<obj4p->product_name<<"\n";
+    cout<<obj5p->id<<setw(5)<<obj5s->name<<setw(7)<<obj5b->name<<setw(11)<<obj5c->name<<setw(16)<<obj5p->product_name<<"\n";
+}
